@@ -3,7 +3,6 @@ from discord.ext import commands
 from discord import app_commands
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from dotenv import load_dotenv
-from keep_alive import keep_alive
 
 import os
 
@@ -38,7 +37,6 @@ async def remind(interaction: discord.Interaction):
     """Sends a reminder message mentioning the user."""
     await interaction.response.send_message(content=f'{interaction.user.mention}, 請訪問 [每日簽到 領取遊戲獎勵](https://uma.komoejoy.com/event/dailygift/) 以參加活動並獲得遊戲獎勵！', ephemeral=True)
 
-keep_alive()
 
 if __name__ == "__main__":
     bot.run(TOKEN)
